@@ -20,12 +20,12 @@ class ArfServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->bind(IHttpClient::class, function ($app) {
+        $this->app->bind(IHttpClient::class, function ($app) {
             $guzzleClient = new Client(['timeout' => 20]);
             return new HttpClient($guzzleClient);
         });
 
-        $this->bind('arf_helper', function () {
+        $this->app->bind('arf_helper', function () {
             return new ArfHelper();
         });
     }
