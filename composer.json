@@ -1,0 +1,33 @@
+{
+  "name": "arf-labs-ou/components",
+  "description": "Arf PHP Components",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.4",
+    "illuminate/support": "^8.74"
+  },
+  "autoload": {
+    "psr-4": {
+      "ArfLabsOu\\Components\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "bariseser",
+      "email": "bariseser@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ArfLabsOu\\Components\\ArfServiceProvider"
+      ]
+    }
+  }
+}
