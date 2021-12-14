@@ -5,8 +5,6 @@
   "license": "MIT",
   "require": {
     "php": "^8.0",
-    "guzzlehttp/guzzle": "^7.4",
-    "illuminate/support": "^8.74"
   },
   "autoload": {
     "psr-4": {
