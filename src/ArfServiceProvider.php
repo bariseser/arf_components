@@ -2,7 +2,7 @@
 
 namespace ArfLabsOu\Components;
 
-use ArfLabsOu\Components\Helper\ArfHelperf;
+use ArfLabsOu\Components\Helper\ArfHelper;
 use ArfLabsOu\Components\HttpClient\HttpClient;
 use ArfLabsOu\Components\HttpClient\IHttpClient;
 use GuzzleHttp\Client;
@@ -25,7 +25,7 @@ class ArfServiceProvider extends ServiceProvider
             return new HttpClient($guzzleClient);
         });
 
-        $this->app->bind('arf_helper', function () {
+        $this->app->singleton('arf_helper', function () {
             return new ArfHelper();
         });
     }
