@@ -33,7 +33,7 @@ class ServiceException extends \Exception
     /**
      * @return mixed
      */
-    public function getResponseData()
+    public function getResponseData(): mixed
     {
         return $this->responseData ?? null;
     }

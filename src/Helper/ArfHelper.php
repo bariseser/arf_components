@@ -15,7 +15,7 @@ class ArfHelper
      * @param string $ext
      * @return string
      */
-    public function generateUniqKey($length, $table, $field, $ext = ''): string
+    public function generateUniqKey($length, $table, $field, string $ext = ''): string
     {
         do {
             $value = $ext . Str::uuid();
@@ -39,9 +39,9 @@ class ArfHelper
      * @param int $length
      * @return string
      */
-    public function numberFormat($value = '', $length = 2): string
+    public function numberFormat(string $value = '', int $length = 2): string
     {
-        $value = (string)$value;
+        $value = $value;
         if (strpos($value, '.')) {
             $valueArray = explode('.', $value);
             $value = $valueArray[0];
